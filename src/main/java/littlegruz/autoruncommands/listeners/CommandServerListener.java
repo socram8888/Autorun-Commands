@@ -92,7 +92,7 @@ public class CommandServerListener implements Listener {
                if((plugin.getCommandMap().get(command) != null
                      || plugin.getCommandMap().get(command + "[op]") != null)
                      && plugin.getRunningRepeatMap().get(command) == null){
-            	   repeatTask = plugin.getServer().getScheduler().runTaskTimerAsynchronously(plugin, new Runnable(){
+            	   repeatTask = plugin.getServer().getScheduler().runTaskTimer(plugin, new Runnable(){
 
                      public void run() {
                         if(plugin.getCommandMap().get(command) != null)

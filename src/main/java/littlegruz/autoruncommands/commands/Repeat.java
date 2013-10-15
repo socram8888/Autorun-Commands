@@ -47,7 +47,7 @@ private CommandMain plugin;
                   // If the command is found and is not already repeating, add it
                   // NOTE: All commands will be run by the console
                   if(plugin.getRunningRepeatMap().get(args[0]) == null){
-                	  repeatTask = plugin.getServer().getScheduler().runTaskTimerAsynchronously(plugin,  new Runnable() {
+                	  repeatTask = plugin.getServer().getScheduler().runTaskTimer(plugin,  new Runnable() {
 
                         public void run() {
                            plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), plugin.getCommandMap().get(command));
